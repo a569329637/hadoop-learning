@@ -67,7 +67,10 @@
 <!--                            <mainClass>com.gsq.mr.wc.WordCountDriver</mainClass>-->
 <!--                            <mainClass>com.gsq.mr.flow.FlowDriver</mainClass>-->
 <!--                            <mainClass>com.gsq.mr.index.IndexOneDriver</mainClass>-->
-                            <mainClass>com.gsq.mr.index.IndexTwoDriver</mainClass>
+<!--                            <mainClass>com.gsq.mr.index.IndexTwoDriver</mainClass>-->
+<!--                            <mainClass>com.gsq.mr.topn.TopNDriver</mainClass>-->
+<!--                            <mainClass>com.gsq.mr.friend.FriendOneDriver</mainClass>-->
+<!--                            <mainClass>com.gsq.mr.friend.FriendTwoDriver</mainClass>-->
                         </manifest>
                     </archive>
                 </configuration>
