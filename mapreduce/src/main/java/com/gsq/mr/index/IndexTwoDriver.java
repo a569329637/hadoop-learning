@@ -37,6 +37,11 @@ public class IndexTwoDriver {
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
+//        String inputPath = "F:/hadoop_test/index/output/part-r-00000";
+//        String outputPath = "F:/hadoop_test/index/output1";
+//        FileInputFormat.setInputPaths(job, new Path(inputPath));
+//        FileOutputFormat.setOutputPath(job, new Path(outputPath));
+
         // 7 提交
         boolean result = job.waitForCompletion(true);
 
