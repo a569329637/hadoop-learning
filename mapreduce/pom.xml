@@ -64,6 +64,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
+                            <mainClass>com.gsq.mr.gulivideo.VideoETLRunner</mainClass>
 <!--                            <mainClass>com.gsq.mr.wc.WordCountDriver</mainClass>-->
 <!--                            <mainClass>com.gsq.mr.flow.FlowDriver</mainClass>-->
 <!--                            <mainClass>com.gsq.mr.index.IndexOneDriver</mainClass>-->
