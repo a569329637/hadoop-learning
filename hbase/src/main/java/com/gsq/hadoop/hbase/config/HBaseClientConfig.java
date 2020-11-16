@@ -13,8 +13,10 @@ import java.io.IOException;
 @org.springframework.context.annotation.Configuration
 public class HBaseClientConfig {
 
-    @Value("${hbase.zk}")
-    private String hbaseZk;
+    @Value("${hbase.zk.host}")
+    private String hbaseZkHost;
+    @Value("${hbase.zk.port}")
+    private String hbaseZkPort;
 
     @Autowired
     private Configuration configuration;
@@ -22,8 +24,9 @@ public class HBaseClientConfig {
     @Bean
     public Configuration getConfiguration() {
         Configuration configuration = HBaseConfiguration.create();
-        configuration.set("hbase.zookeeper.quorum", hbaseZk);
-        configuration.set("hbase.regionserver.port", "16201");
+        configuration.set("hbase.zookeeper.quorum", hbaseZkHost);
+        configuration.set("hbase.zookeeper.property.clientPort", hbaseZkPort);
+//        configuration.set("hbase.regionserver.port", "16201");
         return configuration;
     }
 

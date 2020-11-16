@@ -3,11 +3,13 @@ package com.gsq.hadoop.hbase.controller;
 import com.gsq.hadoop.hbase.domain.HBaseModel;
 import com.gsq.hadoop.hbase.service.HBaseService;
 import com.gsq.hadoop.hbase.utils.IdUtils;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@ApiOperation("hbase-client")
 @RestController
 @RequestMapping("hbase-client")
 public class HBaseTestController {
@@ -40,15 +42,14 @@ public class HBaseTestController {
     }
 
     @GetMapping("query")
-    public List<HBaseModel> query() {
-        String id = "xxx";
+    public List<HBaseModel> query(String id) {
         return hBaseService.query(TABLE_STUDENT, CF_FAMILY, Q_NAME, id);
     }
 
     @GetMapping("delete")
-    public void delete() {
-        String id = "xxx";
+    public String delete(String id) {
         hBaseService.delete(TABLE_STUDENT, id);
+        return "success";
     }
 
 }
